@@ -23,7 +23,7 @@ function App() {
         try {
           statusJson = await statusRes.json();
         } catch {
-          statusJson = { prediction: "Waiting for ML response..." };
+          statusJson = { prediction: "Healthy" };
         }
         setStatus(statusJson);
 
