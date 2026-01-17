@@ -13,11 +13,11 @@ function App() {
     const fetchData = async () => {
       try {
         // Fetch sensor data
-        const res = await fetch("http://192.168.76.113:5000/api/data");
+        const res = await fetch("https://ptitfinalproject.onrender.com/api/data");
         const json = await res.json();
 
         // Fetch plant status returned from Flask ML model
-        const statusRes = await fetch("http://192.168.76.113:5000/api/status");
+        const statusRes = await fetch("https://ptitfinalproject.onrender.com/api/status");
 
         let statusJson;
         try {

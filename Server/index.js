@@ -97,7 +97,7 @@ mongoose.connect(`mongodb+srv://duc:ket@sensordata.6qsisr1.mongodb.net/`)
 
 async function sendToFlask() {
   try {
-    const response = await axios.post("http://127.0.0.1:5001/classify", MLData);
+    const response = await axios.post("https://machinelearningserver.onrender.com/classify", MLData);
     Status = response.data;
     console.log("Sent MLData to Flask:", MLData);
   } catch (err) {
