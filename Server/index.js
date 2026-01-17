@@ -90,9 +90,6 @@ app.listen(PORT, "0.0.0.0", () => {
   // Then send every 5 minutes
   setInterval(sendToFlask, 5 * 60 * 1000);
 });
-mongoose.connect(`mongodb+srv://duc:ket@sensordata.6qsisr1.mongodb.net/`)
-.then(() => console.log('Database is connected'))
-.catch((err) => console.error('Failed to connect to MongoDB', err));
 
 
 async function sendToFlask() {
